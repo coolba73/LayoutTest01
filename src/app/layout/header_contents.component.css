@@ -1,0 +1,31 @@
+#header {
+    width: 100%;
+    height: 60px;
+    background:#dbe3f9;
+    position: fixed;
+    top: 0;
+}
+#content {
+    width: 600px;
+    margin: 0 auto;
+    padding: 60px 0;
+    background: #c0c0c0
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #0080c0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
