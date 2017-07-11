@@ -6,7 +6,8 @@ import { Header_Contents_Component } from "./layout/header_contents.component";
 export const routes : Routes = [
     {
         path:'',
-        redirectTo:'mytask'
+        redirectTo:'mytask',
+        pathMatch:'full'
     },
     {
         path:'',
