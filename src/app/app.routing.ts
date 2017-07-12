@@ -2,6 +2,7 @@ import { Routes,RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 
 import { Header_Contents_Component } from "./layout/header_contents.component";
+import { MdMenuTestComponent } from "./test/MdMenuTest/MdMenuTest.component";
 
 export const routes : Routes = [
     {
@@ -21,6 +22,10 @@ export const routes : Routes = [
                 loadChildren:'./biz/biz.module#BizModule'
             }
         ]
+    },
+    {
+        path:'menutest',
+        component:MdMenuTestComponent
     }
 ];
 
