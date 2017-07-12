@@ -6,7 +6,7 @@ import { Header_Contents_Component } from "./layout/header_contents.component";
 export const routes : Routes = [
     {
         path:'',
-        redirectTo:'mytask',
+        redirectTo:'biz/mytask',
         pathMatch:'full'
     },
     {
@@ -17,7 +17,7 @@ export const routes : Routes = [
         },
         children:[
             {
-                path:'mytask',
+                path:'biz',
                 loadChildren:'./biz/biz.module#BizModule'
             }
         ]
