@@ -8,4 +8,11 @@ import { Component } from "@angular/core";
 })
 export class Header_Contents_Component{
     
+    MyTaskClick(){
+        alert('my task');
+    }
+
+    CanvasTestClick(){
+        alert('canvas test');
+    }
 }

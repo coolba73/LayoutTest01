@@ -1,17 +1,18 @@
 <div class="navbar">
   
 
-  <button md-button  style="color:white;">MyTask</button>
-  <button md-button  style="color:white;">CanvasTest</button>
-  <button md-button [mdMenuTriggerFor]="menu" style="color:white;">Menu</button>
+  <button md-button  style="color:white;" (click)="this.MyTaskClick()" >MyTask</button>
+  <button md-button  style="color:white;"  >Diagram</button>
+
+
+  <button md-button [mdMenuTriggerFor]="menu" style="color:white;">Test</button>
   <md-menu #menu="mdMenu">
-    <button md-menu-item>item 1</button>
-    <button md-menu-item>item 2</button>
+    <button md-menu-item  (click)="this.MyTaskClick()">Canvas Test</button>
   </md-menu> 
+
 </div>
 
-
-<div id="content">
+ <div id="content"> 
     <router-outlet></router-outlet>
-</div>
+ </div> 
 
