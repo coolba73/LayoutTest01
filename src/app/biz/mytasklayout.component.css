@@ -5,14 +5,20 @@
   display: flex;
 }
 
-
-
-#task_sidebar {
+#task_leftsidebar {
     background-color: #f12f2f;
     width: 300px;
     position:fixed;
     float: left;
-    height: 100px;
+    height: 100%;
+}
+
+#task_rightsidebar {
+    background-color: #008000;
+    width: 300px;
+    position:fixed;
+    float: right;
+    height: 100%;
 }
 
 #task_content {
@@ -20,5 +26,5 @@
     width: 500px;
     margin-left:310px;
     float: left;
-    height: 1000px;
+    height: 100%;
 }
