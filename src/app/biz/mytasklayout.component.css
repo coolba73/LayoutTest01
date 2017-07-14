@@ -13,14 +13,6 @@
     height: 100%;
 }
 
-#task_rightsidebar {
-    background-color: #008000;
-    width: 300px;
-    position:fixed;
-    float: right;
-    height: 100%;
-}
-
 #task_content {
     background-color: #4c8ae8;
     width: 500px;
