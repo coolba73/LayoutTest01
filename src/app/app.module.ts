@@ -15,6 +15,8 @@ import {
   MdCommonModule
   ,MdMenuModule
   ,MdButtonModule
+  ,MdIconModule
+  
 } from "@angular/material";
 
 import 'hammerjs';
@@ -36,6 +38,7 @@ import 'hammerjs';
     , MdMenuModule
     , MdButtonModule
     , BrowserAnimationsModule
+    , MdIconModule
 
   ],
   providers: [],

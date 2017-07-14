@@ -1,22 +1,29 @@
-#header {
-    width: 100%;
-    height: 60px;
-    background:#dbe3f9;
-    position: fixed;
-    top: 0;
+
+#section1 {
+     background: url("/assets/img/2_pexels-photo-271560.jpeg") no-repeat center center fixed ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+
+
 #content {
     width: 100%;
     margin: 0 auto;
     padding: 60px 0;
+    
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #8080ff;
   position: fixed;
+  background: black;
   top: 0;
   width: 100%;
+  opacity: 1;
+  height: 40px;
 }
 
 .navbar a {
@@ -28,3 +35,5 @@
   text-decoration: none;
   font-size: 17px;
 }
+
+
