@@ -7,8 +7,64 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script type="text/javascript">
+
+    function setBackground () {
+
+
+      var images = [
+                        {
+                            src : 'pexels-photo-29390.jpeg'
+                        },
+                        {
+                            src : 'pexels-photo-42389.jpeg'
+                        },
+                        {
+                            src : 'pexels-photo-173427.jpeg'
+                        },
+                        {
+                            src : 'pexels-photo-220444.jpeg'
+                        },
+                        {
+                            src : 'pexels-photo-227668.jpeg'
+                        },
+                        {
+                            src : 'pexels-photo-242359.jpeg'
+                        },
+                        {
+                            src : 'pexels-photo-266044.jpeg'
+                        },
+                        {
+                            src : 'pexels-photo-271560.jpeg'
+                        }
+    ];
+
+        // generates a random integer between 0 and the length of the supplied array:
+        var n = Math.floor(Math.random() * images.length),
+            // works out whether to use the 'textContent' or 'innerText' property:
+            textProperty = 'textContent' in document ? 'textContent' : 'innerText';
+
+        // sets the background-image of the 'body' element:
+        document.body.style.background = 'url(/assets/img/' + images[n].src + ') no-repeat center center fixed';
+        document.body.style.webkitBackgroundSize = 'cover';
+        
+
+
+        // sets the text of the relevant subtitle element:
+        document.getElementById('subtitleElementID')[textProperty] = images[n].subtitle;
+    }
+
+
+  </script>
+  
+
+    
 </head>
 <body>
   <app-root>Loading...</app-root>
 </body>
+  <script type="text/javascript"> 
+  setBackground();
+</script>   
 </html>
