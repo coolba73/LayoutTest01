@@ -12,41 +12,18 @@
             <button md-button>Edit Profile</button>
 
         </md-card>
-        <md-card class="example-card" style="background: #e7e7e7">
+
+        <md-card class="example-card" style="background: #dbdbdb" >
             <md-card-actions>
                 <button md-button> + Add Task</button>
                 <button md-button>Search</button>
             </md-card-actions>
-            <hr>
-
-            <!-- <section >
-            <md-radio-group>
-                    <section   *ngFor="let season of seasons"  >
-                        <md-radio-button [value]="season">
-                            {{season}} 
-                        </md-radio-button>
-                    </section>
-                    
-                </md-radio-group>
-            </section> -->
-
-            <section>
-                <md-slide-toggle>Today</md-slide-toggle>
-            </section>
-
-            <section>
-                <md-slide-toggle>Not Started</md-slide-toggle>
-            </section>
-            <section>
-                <md-slide-toggle>Done</md-slide-toggle>
-            </section>
-            <section>
-                <md-slide-toggle>Timeout</md-slide-toggle>
-            </section>
-
         </md-card>
+        
 
     </div>
+
+    
 
     <div id="task_content" style="opacity: 0.95;">
 
@@ -72,6 +49,30 @@
         <mytask></mytask>
         <mytask></mytask>
         <mytask></mytask>
+
+    </div>
+
+
+    <div id="task_rightsidebar">
+       
+        <md-card class="example-card" >
+
+            <md-card-subtitle>Filter Option</md-card-subtitle>
+            <section>
+                <md-slide-toggle>Today</md-slide-toggle>
+            </section>
+
+            <section>
+                <md-slide-toggle>Not Started</md-slide-toggle>
+            </section>
+            <section>
+                <md-slide-toggle>Done</md-slide-toggle>
+            </section>
+            <section>
+                <md-slide-toggle>Timeout</md-slide-toggle>
+            </section>
+
+        </md-card>
 
     </div>
 

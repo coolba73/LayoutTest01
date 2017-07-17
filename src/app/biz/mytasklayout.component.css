@@ -1,11 +1,21 @@
 #main {
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto; 
   display: flex;
 }
 
 #task_leftsidebar {
     width: 300px;
+    position:fixed;
+    float: left;
+    height: 100%;
+    /* opacity: 0.9; */
+    
+}
+
+#task_rightsidebar {
+    width: 300px;
+    margin-left:820px;
     position:fixed;
     float: left;
     height: 100%;

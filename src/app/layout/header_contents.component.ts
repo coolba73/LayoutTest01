@@ -1,4 +1,5 @@
 import { Component, HostBinding } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector : 'app-root',
@@ -9,11 +10,15 @@ import { Component, HostBinding } from "@angular/core";
 export class Header_Contents_Component{
     
 
+    constructor(private _router:Router){}
+
     MyTaskClick(){
         // alert('my task');
+        this._router.navigate(['/biz/mytask']);
     }
 
     CanvasTestClick(){
-        // alert('canvas test');
+        //alert('canvas test');
+        this._router.navigate(['/test/canvastest01']);
     }
 }

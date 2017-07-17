@@ -20,6 +20,10 @@ export const routes : Routes = [
             {
                 path:'biz',
                 loadChildren:'./biz/biz.module#BizModule'
+            },
+            {
+                path:'test',
+                loadChildren:'./test/test.module#TestModule'
             }
         ]
     },
