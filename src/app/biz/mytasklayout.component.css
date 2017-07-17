@@ -9,6 +9,8 @@
     position:fixed;
     float: left;
     height: 100%;
+    /* opacity: 0.9; */
+    
 }
 
 #task_content {
@@ -16,4 +18,5 @@
     margin-left:310px;
     float: left;
     height: 100%;
+    /* opacity: 0.9; */
 }

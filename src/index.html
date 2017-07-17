@@ -14,16 +14,47 @@
 
 
       var images = [
-                         {src : '1.jpeg'}
-                        ,{src : '2.jpeg'}
-                        ,{src : '3.jpeg'}
-                        ,{src : '4.jpeg'}
-                        ,{src : '5.jpeg'}
-                        ,{src : '6.jpeg'}
-                        ,{src : '7.jpeg'}
-                        ,{src : '8.jpeg'}
+                         {src : 'url(https://static.pexels.com/photos/94315/pexels-photo-94315.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/476253/pexels-photo-476253.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/472325/pexels-photo-472325.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/279086/pexels-photo-279086.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/489616/pexels-photo-489616.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/69094/sun-nature-sea-grass-sky-69094.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/136168/pexels-photo-136168.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/490149/pexels-photo-490149.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/374845/pexels-photo-374845.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/432832/pexels-photo-432832.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/29636/pexels-photo-29636.jpg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/466401/urban-city-aerial-view-buildings-snow-466401.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/500980/pexels-photo-500980.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/479190/pexels-photo-479190.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/173294/pexels-photo-173294.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/512310/pexels-photo-512310.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/374592/pexels-photo-374592.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/500109/pexels-photo-500109.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/201771/pexels-photo-201771.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/296881/pexels-photo-296881.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/380769/pexels-photo-380769.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/173294/pexels-photo-173294.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/127027/pexels-photo-127027.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/69372/pexels-photo-69372.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/331991/pexels-photo-331991.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/477799/pexels-photo-477799.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/247929/pexels-photo-247929.jpeg)'}
+                        ,{src : 'url(https://static.pexels.com/photos/247929/pexels-photo-247929.jpeg)'}
 
-                        
+                        ,{src : 'url(/assets/img/001.jpeg)'}
+                        ,{src : 'url(/assets/img/002.jpeg)'}
+                        ,{src : 'url(/assets/img/003.jpeg)'}
+                        ,{src : 'url(/assets/img/004.jpeg)'}
+                        ,{src : 'url(/assets/img/005.jpeg)'}
+                        ,{src : 'url(/assets/img/006.jpeg)'}
+                        ,{src : 'url(/assets/img/007.jpeg)'}
+                        ,{src : 'url(/assets/img/008.jpeg)'}
+                        ,{src : 'url(/assets/img/009.jpeg)'}
+                        ,{src : 'url(/assets/img/010.jpeg)'}
+
+
     ];
 
         // generates a random integer between 0 and the length of the supplied array:
@@ -32,7 +63,9 @@
             textProperty = 'textContent' in document ? 'textContent' : 'innerText';
 
         // sets the background-image of the 'body' element:
-        document.body.style.background = 'url(/assets/img/' + images[n].src + ') no-repeat center center fixed';
+        var tonedown = 'linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.4) ),';
+        tonedown = '';
+        document.body.style.background = tonedown +  images[n].src + ' no-repeat center center fixed';
         document.body.style.webkitBackgroundSize = 'cover';
         
 

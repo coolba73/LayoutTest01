@@ -13,8 +13,6 @@ export class Header_Contents_Component{
         alert('my task');
     }
 
-     
-
     CanvasTestClick(){
         alert('canvas test');
     }
