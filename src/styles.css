@@ -5,11 +5,11 @@
 body {
 
       /* background: url("/assets/img/pexels-photo-42389.jpeg") no-repeat center center fixed ;   */
-      background: rgba(0, 0, 0, 0.3);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     height: 100%;
     width: 100%;

@@ -3,12 +3,11 @@
    <div class="navbar">
 
     <button md-button style="color:white" (click)="this.MyTaskClick()">MyTask</button>
-    <button md-button style="color:white">Diagram</button>
 
 
     <button md-button [mdMenuTriggerFor]="menu" style="color:white">Test</button>
     <md-menu #menu="mdMenu">
-      <button md-menu-item (click)="this.MyTaskClick()">Canvas Test</button>
+      <button md-menu-item (click)="this.CanvasTestClick()">Canvas Test</button>
     </md-menu>
 
   </div>

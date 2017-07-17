@@ -10,10 +10,10 @@ export class Header_Contents_Component{
     
 
     MyTaskClick(){
-        alert('my task');
+        // alert('my task');
     }
 
     CanvasTestClick(){
-        alert('canvas test');
+        // alert('canvas test');
     }
 }

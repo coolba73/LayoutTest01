@@ -20,3 +20,7 @@
     height: 100%;
     /* opacity: 0.9; */
 }
+
+.circular--square {
+  border-radius: 50%;
+}

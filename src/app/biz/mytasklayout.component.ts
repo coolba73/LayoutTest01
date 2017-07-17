@@ -6,5 +6,9 @@ import { Component } from "@angular/core";
     styleUrls : ['./mytasklayout.component.css']
 })
 export class MyTaskLayoutComponent{
-    
+      seasons = [
+    'All ',
+    'Done ',
+    'Today',
+  ];
 }
