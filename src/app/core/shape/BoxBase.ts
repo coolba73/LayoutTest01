@@ -107,6 +107,23 @@ export class BoxBase extends BaseObject{
         ctx.fillStyle = this.TextColor;
         ctx.fillText(this.Seq.toString(), this.x, this.y-10);
 
+
+        this.DrawImageTest(ctx);
+
+    }
+
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    DrawImageTest(ctx:CanvasRenderingContext2D)
+    {
+        let imageSize : number = 30;
+
+        let imageObj = new Image();
+
+        imageObj.src = "/assets/img/identicon01.png";
+
+        ctx.drawImage(imageObj, this.x + this.Width - imageSize ,this.y-imageSize - 10, imageSize, imageSize);
+
     }
 
 
