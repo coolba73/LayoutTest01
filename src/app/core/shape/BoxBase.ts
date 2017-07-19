@@ -108,13 +108,13 @@ export class BoxBase extends BaseObject{
         ctx.fillText(this.Seq.toString(), this.x, this.y-10);
 
 
-        this.DrawImageTest(ctx);
+        this.DrawImage(ctx);
 
     }
 
 
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-    DrawImageTest(ctx:CanvasRenderingContext2D)
+    DrawImage(ctx:CanvasRenderingContext2D)
     {
         let imageSize : number = 30;
 
