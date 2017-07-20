@@ -108,7 +108,7 @@ export class BoxBase extends BaseObject{
         ctx.fillText(this.Seq.toString(), this.x, this.y-10);
 
 
-        this.DrawImage(ctx);
+        //this.DrawImage(ctx);
 
     }
 

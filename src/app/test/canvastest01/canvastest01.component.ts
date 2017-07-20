@@ -32,7 +32,7 @@ export class Canvastest01Component implements OnInit {
 		box.y = 10;
 		
 		this.finCanvas.AddObject(box);
+		
 	}
-
 
 }//class
