@@ -21,4 +21,9 @@ export class Header_Contents_Component{
         //alert('canvas test');
         this._router.navigate(['/test/canvastest01']);
     }
-}
+
+    DartTestClick(){
+        this._router.navigate(['/test/darttest01']);
+    }
+    
+}//class

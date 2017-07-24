@@ -1,18 +1,16 @@
+<div class="navbar">
+
+  <button md-button style="color:white" (click)="this.MyTaskClick()">MyTask</button>
 
 
-   <div class="navbar">
+  <button md-button [mdMenuTriggerFor]="menu" style="color:white">Test</button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item (click)="this.CanvasTestClick()">Canvas Test</button>
+    <button md-menu-item (click)="this.DartTestClick()">Dart API Test</button>
+  </md-menu>
 
-    <button md-button style="color:white" (click)="this.MyTaskClick()">MyTask</button>
+</div>
 
-
-    <button md-button [mdMenuTriggerFor]="menu" style="color:white">Test</button>
-    <md-menu #menu="mdMenu">
-      <button md-menu-item (click)="this.CanvasTestClick()">Canvas Test</button>
-      <button md-menu-item (click)="this.CanvasTestClick()">DevExtreme Test</button>
-    </md-menu>
-
-  </div>
-
-  <div id="content">
-    <router-outlet></router-outlet>
-  </div> 
+<div id="content">
+  <router-outlet></router-outlet>
+</div>
