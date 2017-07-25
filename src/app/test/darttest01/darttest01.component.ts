@@ -11,5 +11,9 @@ export class DartTest01Component implements OnInit {
 	constructor() { }
 
 	ngOnInit() { }
+
+	Call_Click(){
+		
+	}
 	
-}
+}//class
