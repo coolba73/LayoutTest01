@@ -27,6 +27,7 @@ export class Header_Contents_Component{
     }
 
     CorpSearchClick(){
+        this._router.navigate(['/corpvalue/corpsearch']);
     }
     
 }//class

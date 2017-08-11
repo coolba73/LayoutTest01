@@ -24,6 +24,10 @@ export const routes : Routes = [
             {
                 path:'test',
                 loadChildren:'./test/test.module#TestModule'
+            },
+            {
+                path:'corpvalue',
+                loadChildren:'./corpvalue/corpvalue.module#CorpValueModule'
             }
         ]
     },
