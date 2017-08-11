@@ -31,7 +31,6 @@ import 'hammerjs';
   imports: [
 
     BrowserModule
-    , FormsModule
     , HttpModule
     , AppRoutingModule
     , MdCommonModule

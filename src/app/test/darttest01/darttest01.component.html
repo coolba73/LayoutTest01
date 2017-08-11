@@ -1,11 +1,12 @@
-<div style='margin: 10px; background: white'>
-    
+
+<div id="main">
+
     <section>
-        <button md-button (click)="Call_Click()" style='margin: 10px'>Call</button>
+        <button md-raised-button (click)="Call_Click()" style='margin: 10px'>Call</button>
     </section>
 
-    <md-input-container  style="margin: 10px" >
-      <textarea mdInput placeholder="API Output" style='width:1000px; height: 500px '  ></textarea>
+    <md-input-container  style="background: white; margin-left: 10px; width: 98%; margin-right: 10px; margin-bottom: 10px" >
+      <textarea mdInput placeholder="API Output" style='width:98%; height: 500px ; margin-left: 10px; ' [(ngModel)]="this.ReturnValue"> {{this.ReturnValue}} </textarea>
     </md-input-container>
 
 </div>

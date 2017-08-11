@@ -7,6 +7,7 @@ import { FincanvasComponent } from "../core/htmlcomponent/fincanvas/fincanvas.co
 import { MdButtonModule, MdInputModule } from "@angular/material";
 
 import { DartTest01Component } from "./darttest01/darttest01.component";
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { DartTest01Component } from "./darttest01/darttest01.component";
         CommonModule,
         TestRouting,
         MdButtonModule,
-        MdInputModule
+        MdInputModule,
+        FormsModule
     ],
     declarations:[
         Canvastest01Component
