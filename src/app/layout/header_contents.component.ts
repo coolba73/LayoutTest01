@@ -25,5 +25,8 @@ export class Header_Contents_Component{
     DartTestClick(){
         this._router.navigate(['/test/darttest01']);
     }
+
+    CorpSearchClick(){
+    }
     
 }//class

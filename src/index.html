@@ -60,7 +60,7 @@
         // generates a random integer between 0 and the length of the supplied array:
         var n = Math.floor(Math.random() * images.length),
             // works out whether to use the 'textContent' or 'innerText' property:
-            textProperty = 'textContent' in document ? 'textContent' : 'innerText';
+            textProperty = 'textContent' in document ? 'textContent' : 'innerText'; 
 
         // sets the background-image of the 'body' element:
         var tonedown = 'linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.4) ),';
@@ -75,7 +75,6 @@
         document.getElementById('subtitleElementID')[textProperty] = images[n].subtitle;
     }
 
-
   </script>
   
 
@@ -85,6 +84,6 @@
   <app-root>Loading.....</app-root>
 </body>
   <script type="text/javascript"> 
-  setBackground();
+  //setBackground();
 </script>   
 </html>

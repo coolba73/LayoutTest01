@@ -12,10 +12,9 @@
 .navbar {
   overflow: hidden;
   position: fixed;
-  background: black;
+  background: #115256;
   top: 0;
   width: 100%;
-  opacity: 0.8;
   height: 40px;
 }
 
