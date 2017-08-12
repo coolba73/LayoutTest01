@@ -1,25 +1,17 @@
-<div class="navbar">
-
-  
-
-  <!-- <button md-button style="color:white" (click)="this.MyTaskClick()">MyTask</button> -->
-
-  
+<div class="navbar" >
 
   <button md-button [mdMenuTriggerFor]="menu" style="color:white">Test</button>
   <md-menu #menu="mdMenu">
     <button md-menu-item (click)="this.MyTaskClick()">My Task</button>
     <button md-menu-item (click)="this.CanvasTestClick()">Canvas Test</button>
     <button md-menu-item (click)="this.DartTestClick()">Dart API Test</button>
-    
   </md-menu>
 
   <button md-button [mdMenuTriggerFor]="menu2" style="color:white">기업가치평가</button>
   <md-menu #menu2="mdMenu">
-    <button md-menu-item (click)="this.CorpSearchClick()">회사 조회</button>
+    <button md-menu-item (click)="this.CorpSearchClick()">상장법인 조회</button>
     <button md-menu-item (click)="this.DartTestClick()">유형별 조회</button>
   </md-menu>
-
 
   <button md-button [mdMenuTriggerFor]="menu" style="color:white">부동산 평가</button>
 
