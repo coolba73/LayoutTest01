@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 
 @Component({
     templateUrl:'./corpsearch.component.html',
-    styleUrls:['./corpsearch.component.css']
+    styleUrls:['./corpsearch.component.css'
+    ]
 })
 export class CorpSearchComponent{
     
