@@ -1,42 +1,42 @@
 
 <div id="main">
-
- 
-
-  <div class="col-sm-2" style="margin: 10px; width:600px">
-      <md-card class="example-card">
-
-        <md-card-header>
-          <md-card-title>기아자동차</md-card-title>
-        </md-card-header>
   
-        <br>
-        <div class="w3-container w3-center" >
-            <p style="text-align:center;"><img src="https://colly.blob.core.windows.net/dartexcel/kia2.jpg"></p>
-          </div>
-
-        <md-card-content>
-          <p>
-             시총 :     100,000,000원
-          </p>
-          
-          <P>
-              주가 :     1,000,000 원
-          </P>
-          <P>
-              평가 : 1,000,000,000 원
-          </P>
-        </md-card-content>
-        <md-card-actions>
-          <button md-raised-button (click)="this.ExcelDownload()" ><i class="material-icons" >file_download</i> Basic Excel</button>
-          <button md-raised-button (click)="this.ExcelDownload()" ><i class="material-icons" >file_download</i> Analysis Excel</button>
-          <button md-raised-button (click)="this.GoDiagram()"   ><i class="material-icons">format_shapes</i> Flow</button>
-          
-        </md-card-actions>
-      </md-card>
-    </div>
-
-
-
-
-</div>
+   
+    <div class="col-sm-2" style="margin: 10px; width:600px">
+        <md-card class="example-card">
+  
+            <h1 style="text-align:center;">기아자동차</h1>
+    
+          <div class="w3-container w3-center" >
+              <p style="text-align:center;"><img src="https://colly.blob.core.windows.net/dartexcel/kia2.jpg"></p>
+            </div>
+  
+          <md-card-content>
+            <table width='200px' align='center'>
+              <tr>
+                <td>시가총액</td>
+                <td align='right'>100,000,000 원</td>
+              </tr>
+  
+              <tr>
+                  <td>주가</td>
+                  <td align='right'>10,000,000 원</td>
+                </tr>
+  
+                <tr>
+                    <td>평가금액</td>
+                    <td align='right'>100,000,000 원</td>
+                  </tr>
+                
+            </table>
+          </md-card-content>
+          <md-card-actions>
+            <button md-raised-button (click)="this.ExcelDownload()" ><i class="material-icons" >file_download</i> Basic Excel</button>
+            <button md-raised-button (click)="this.ExcelDownload()" ><i class="material-icons" >file_download</i> Analysis Excel</button>
+            <button md-raised-button (click)="this.GoDiagram()"   ><i class="material-icons">format_shapes</i> Flow</button>
+          </md-card-actions>
+        </md-card>
+      </div> 
+  
+  
+  </div>
