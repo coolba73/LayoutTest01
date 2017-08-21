@@ -1,3 +1,58 @@
 <div id="main">
-    One Result
+
+  <div class="col-sm-2" style="margin: 10px; width:300px">
+    <md-card class="example-card">
+      <md-card-header>
+        <md-card-title>기아자동차</md-card-title>
+        <md-card-subtitle>Basic Template </md-card-subtitle>
+      </md-card-header>
+      <br>
+
+        <div class="w3-container w3-center" >
+          <p style="text-align:center;"><img src="https://colly.blob.core.windows.net/dartexcel/kia2.jpg"></p>
+        </div>
+
+      <md-card-content>
+        <p>
+
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button (click)="this.ExcelDownload()"  >Excel</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+
+  <div class="col-sm-2" style="margin: 10px; width:300px">
+      <md-card class="example-card">
+        <md-card-header>
+          <md-card-title>기아자동차</md-card-title>
+          <md-card-subtitle>Analysis Template </md-card-subtitle>
+        </md-card-header>
+  
+        <br>
+        <div class="w3-container w3-center" >
+            <p style="text-align:center;"><img src="https://colly.blob.core.windows.net/dartexcel/kia2.jpg"></p>
+          </div>
+
+        <md-card-content>
+          <p>
+             시가총액 : 100,000,000원
+          </p>
+          
+          <P>
+              주가 : 1,000,000 원
+          </P>
+          <P>
+              평가가격 : 1,000,000,000 원
+          </P>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button (click)="this.ExcelDownload()" >Excel</button>
+          <button md-button  >Flow</button>
+        </md-card-actions>
+      </md-card>
+    </div>
+
+
 </div>

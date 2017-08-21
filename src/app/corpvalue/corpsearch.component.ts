@@ -18,6 +18,8 @@ export class CorpSearchComponent{
     Search()
     {
         this._router.navigate(['../oneresult'] , {relativeTo:this._activatedRoute} );
+        
     }
+
 
 }//class  
