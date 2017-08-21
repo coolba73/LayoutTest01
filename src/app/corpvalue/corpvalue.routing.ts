@@ -1,7 +1,10 @@
 import { Routes, RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 
+//component import
 import { CorpSearchComponent } from "./corpsearch.component";
+import { OneResultComponent } from "./oneresult.component";
+
 
 export const routes : Routes = [
     {
@@ -10,6 +13,10 @@ export const routes : Routes = [
             {
                 path:'corpsearch',
                 component:CorpSearchComponent
+            },
+            {
+                path:"oneresult",
+                component:OneResultComponent
             }
             
         ]
