@@ -27,5 +27,4 @@ export class OneResultComponent{
         this._router.navigate(['../../test/canvastest01'], {relativeTo:this._activatedRoute});
     }
 
-
 }//class
