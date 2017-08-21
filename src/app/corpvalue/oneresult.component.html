@@ -1,9 +1,11 @@
+
 <div id="main">
 
  
 
   <div class="col-sm-2" style="margin: 10px; width:600px">
       <md-card class="example-card">
+
         <md-card-header>
           <md-card-title>기아자동차</md-card-title>
         </md-card-header>
@@ -15,24 +17,26 @@
 
         <md-card-content>
           <p>
-             시가총액 : 100,000,000원
+             시총 :     100,000,000원
           </p>
           
           <P>
-              주가 : 1,000,000 원
+              주가 :     1,000,000 원
           </P>
           <P>
-              평가가격 : 1,000,000,000 원
+              평가 : 1,000,000,000 원
           </P>
         </md-card-content>
         <md-card-actions>
           <button md-raised-button (click)="this.ExcelDownload()" ><i class="material-icons" >file_download</i> Basic Excel</button>
           <button md-raised-button (click)="this.ExcelDownload()" ><i class="material-icons" >file_download</i> Analysis Excel</button>
-          <button md-raised-button  ><i class="material-icons">format_shapes</i> View Flow</button>
+          <button md-raised-button (click)="this.GoDiagram()"   ><i class="material-icons">format_shapes</i> Flow</button>
           
         </md-card-actions>
       </md-card>
     </div>
+
+
 
 
 </div>

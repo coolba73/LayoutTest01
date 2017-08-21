@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
     templateUrl:'oneresult.component.html',
@@ -7,9 +8,24 @@ import { Component } from "@angular/core";
 export class OneResultComponent{
     
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    constructor(
+        private _router : Router,
+        private _activatedRoute : ActivatedRoute
+    ){}
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
     ExcelDownload()
     {
-        alert('down');
+        //https://colly.blob.core.windows.net/dartexcel/upload.xls
+        // alert('down');
+
+        window.location.href = "https://colly.blob.core.windows.net/dartexcel/upload.xls";
     }
-    
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    GoDiagram(){
+        this._router.navigate(['../../test/canvastest01'], {relativeTo:this._activatedRoute});
+    }
+
+
 }//class
