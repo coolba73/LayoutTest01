@@ -19,7 +19,9 @@ export class OneResultComponent{
         //https://colly.blob.core.windows.net/dartexcel/upload.xls
         // alert('down');
 
-        window.location.href = "https://colly.blob.core.windows.net/dartexcel/upload.xls";
+        // window.location.href = "https://colly.blob.core.windows.net/dartexcel/upload.xls";
+        window.location.href = "https://colly.blob.core.windows.net/makeexcel/test_make.xlsx";
+
     }
 
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
