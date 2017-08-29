@@ -1,0 +1,11 @@
+#canvastest01_main {
+    width: 1200px;
+    margin: 0 auto;
+    background:#066999;  
+}
+#container {
+    height: 600px;
+    overflow: auto;
+    border: 1px solid #ebebeb;
+    margin: 10px;
+}
