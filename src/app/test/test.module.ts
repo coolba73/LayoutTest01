@@ -8,7 +8,7 @@ import { MdButtonModule, MdInputModule } from "@angular/material";
 
 import { DartTest01Component } from "./darttest01/darttest01.component";
 import { FormsModule } from '@angular/forms';
-
+import { ChartTest01Component } from "./ChartTest01/chartTest01.component";
 
 @NgModule({
     imports:[
@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
         Canvastest01Component
         ,FincanvasComponent
         ,DartTest01Component
+        ,ChartTest01Component
     ]
 })
 export class TestModule{}
