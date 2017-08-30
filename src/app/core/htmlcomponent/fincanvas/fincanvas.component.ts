@@ -181,12 +181,12 @@ export class FincanvasComponent implements OnInit {
 
 
         if (res.pageX || res.pageY) { 
-            rex = res.pageX + document.getElementById("container").scrollLeft ;
-            rey = res.pageY + document.getElementById("container").scrollTop;
+            rex = res.pageX + document.getElementById("canvas_container").scrollLeft ;
+            rey = res.pageY + document.getElementById("canvas_container").scrollTop;
         }
         else { 
-            rex = res.clientX + document.body.scrollLeft + document.documentElement.scrollLeft + document.getElementById("container").scrollLeft; 
-            rey = res.clientY + document.body.scrollTop + document.documentElement.scrollTop + document.getElementById("container").scrollTop; 
+            rex = res.clientX + document.body.scrollLeft + document.documentElement.scrollLeft + document.getElementById("canvas_container").scrollLeft; 
+            rey = res.clientY + document.body.scrollTop + document.documentElement.scrollTop + document.getElementById("canvas_container").scrollTop; 
         } 
 
         rex -= canvasEl.offsetLeft;
@@ -499,8 +499,8 @@ export class FincanvasComponent implements OnInit {
 
         // this.message = ( test1 === test2 ? "equal" : "not");
 
-        console.log( document.getElementById("container").scrollLeft);
-        console.log(document.getElementById("container").scrollTop);
+        console.log( document.getElementById("canvas_container").scrollLeft);
+        console.log(document.getElementById("canvas_container").scrollTop);
 
     }
 

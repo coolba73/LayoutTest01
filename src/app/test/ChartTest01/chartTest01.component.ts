@@ -171,13 +171,7 @@ export class ChartTest01Component implements OnInit{
                 xAxis: {
                     axisLabel: 'Dates',
                     tickFormat: function(d) {
-                        // return d3.time.format('%x')(new Date(new Date() - (20000 * 86400000) + (d * 86400000)));
-                        // return d3.time.format('%x')(new Date(d));
-                        // return d.toString().substring(0,4) + "-" +
-                        //        d.toString().substring(4,2) + "-" +
-                        //        d.toString().substring(6,2) + "-" 
-                        // ;
-
+                        
                         var re = d.toString();
                         return re.substring(0,4)
                                + '-' +re.substring(4,6)
