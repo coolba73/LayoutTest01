@@ -11,6 +11,9 @@ import { AppRoutingModule } from "./app.routing";
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { DevExtremeModule } from "devextreme-angular";
+
+
 import {
   MdCommonModule
   ,MdMenuModule
@@ -38,6 +41,7 @@ import 'hammerjs';
     , MdButtonModule
     , BrowserAnimationsModule
     , MdIconModule
+    , DevExtremeModule
 
   ],
   providers: [],
