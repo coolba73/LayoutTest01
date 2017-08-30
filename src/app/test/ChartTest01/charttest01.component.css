@@ -1,11 +1,15 @@
-#canvastest01_main {
+#chart_main {
     width: 1200px;
     margin: 0 auto;
-    background:#066999;  
+    background:lightblue;  
 }
-#container {
-    height: 600px;
+
+
+#chart_container {
+    height: 400px;
     overflow: auto;
     border: 1px solid #ebebeb;
     margin: 10px;
-}
+    margin-top: 10px;
+    background: white;
+  }

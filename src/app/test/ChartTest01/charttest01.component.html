@@ -1,3 +1,23 @@
-<div>
-    <nvd3 [options]="options" [data]="data"></nvd3>
+<div id='chart_main'>
+
+    <div id='chart_container'>
+        <div>
+            <nvd3 [options]="options_BarChart" [data]="data"></nvd3>
+        </div>
+    </div>
+
+    <div id='chart_container'>
+        <div>
+            <nvd3 [options]="this.options_AreaChart" [data]="this.data_AreaChart"></nvd3>
+        </div>
+    </div>
+    <div id='chart_container'>
+        <div>
+            <nvd3 [options]="this.options_CandleChart" [data]="this.data_CandleChart"></nvd3>
+        </div>
+    </div>
+    
+
+
+
 </div>

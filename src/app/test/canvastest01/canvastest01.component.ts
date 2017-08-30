@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,ViewEncapsulation } from '@angular/core';
 import { FincanvasComponent } from "../../core/htmlcomponent/fincanvas/fincanvas.component";
 import { BaseObject } from "../../core/shape/BaseObject";
 import { BoxBase } from "../../core/shape/BoxBase";
@@ -8,7 +8,8 @@ import { BoxBase } from "../../core/shape/BoxBase";
 @Component({
 	selector: 'canvastest01',
 	templateUrl: 'canvastest01.component.html',
-	styleUrls: ['canvastest01.component.css']
+	styleUrls: ['canvastest01.component.css'],
+	encapsulation : ViewEncapsulation.None
 })
 
 export class Canvastest01Component implements OnInit {
