@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ChartTest01Component } from "./ChartTest01/chartTest01.component";
 import { NvD3Module } from "ng2-nvd3";
 
+import { BubbleChartComponent } from "./ChartTest01/chartTest01.component";
+
 import 'd3';
 import 'nvd3';
 
@@ -28,6 +30,7 @@ import 'nvd3';
         ,FincanvasComponent
         ,DartTest01Component
         ,ChartTest01Component
+        ,BubbleChartComponent
     ]
 })
 export class TestModule{}
