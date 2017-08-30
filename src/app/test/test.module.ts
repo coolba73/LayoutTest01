@@ -9,6 +9,10 @@ import { MdButtonModule, MdInputModule } from "@angular/material";
 import { DartTest01Component } from "./darttest01/darttest01.component";
 import { FormsModule } from '@angular/forms';
 import { ChartTest01Component } from "./ChartTest01/chartTest01.component";
+import { NvD3Module } from "ng2-nvd3";
+
+import 'd3';
+import 'nvd3';
 
 @NgModule({
     imports:[
@@ -16,7 +20,8 @@ import { ChartTest01Component } from "./ChartTest01/chartTest01.component";
         TestRouting,
         MdButtonModule,
         MdInputModule,
-        FormsModule
+        FormsModule,
+        NvD3Module
     ],
     declarations:[
         Canvastest01Component
