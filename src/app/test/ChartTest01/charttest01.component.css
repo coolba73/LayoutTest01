@@ -15,10 +15,21 @@
   }
 
   .chart_container {
-    height: 400px;
+    height: 500px;
     overflow: auto;
     border: 1px solid #ebebeb;
     margin: 10px;
     margin-top: 10px;
     background: white;
   }
+
+
+  #chart {
+    height: 440px;
+    width: 100%;
+}
+
+#chart.pointer-on-bars .dxc-series rect {
+    cursor: pointer;
+}
+

@@ -26,6 +26,13 @@ export class ChartTest01Component implements OnInit{
 
     citiesPopulations: CitiesPopulation[];
 
+    dsMaleAge: MaleAgeStructure[];
+
+    dsDrillDown: DataItem[];
+    dsDrillDownSrc: DataItem[];
+    isFirstLevel: boolean;
+    colors: string[] = ["#6babac", "#e55253"];
+
 
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
     ngOnInit() {
@@ -35,7 +42,9 @@ export class ChartTest01Component implements OnInit{
         this.SetCandleCharet();
         this.DxChart_MultiplePanes();
         this.SetCityPopulationData();
-        
+        this.SetMaleAgeData();
+        this.SetDrillDownData();
+        this.isFirstLevel = true;
     }
 
    
@@ -505,7 +514,7 @@ export class ChartTest01Component implements OnInit{
     }
 
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-    customizeTooltip(arg) {
+    customizeTooltip2(arg) {
         var data = arg.node.data,
             result = null;
 
@@ -519,9 +528,119 @@ export class ChartTest01Component implements OnInit{
         };
     }
 
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    SetMaleAgeData()
+    {
+        this.dsMaleAge = [{
+            state: "Germany",
+            young: 6.7,
+            middle: 28.6,
+            older: 5.1
+        }, {
+            state: "Japan",
+            young: 9.6,
+            middle: 43.4,
+            older: 9
+        }, {
+            state: "Russia",
+            young: 13.5,
+            middle: 49,
+            older: 5.8
+        }, {
+            state: "USA",
+            young: 30,
+            middle: 90.3,
+            older: 14.5
+        }];
+        
+    }
 
+    //Set Drill Down
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    SetDrillDownData(){
 
-}//class
+        this.dsDrillDownSrc = 
+        [
+            { arg: "Asia", val: 3007613498, parentID: "" },
+            { arg: "North America", val: 493603615, parentID: "" },
+            { arg: "Europe", val: 438575293, parentID: "" },
+            { arg: "Africa", val: 381331438, parentID: "" },
+            { arg: "South America", val: 331126555, parentID: "" },
+            { arg: "Nigeria", val: 181562056, parentID: "Africa" },
+            { arg: "Egypt", val: 88487396, parentID: "Africa" },
+            { arg: "Congo", val: 77433744, parentID: "Africa" },
+            { arg: "Morocco", val: 33848242, parentID: "Africa" },
+            { arg: "China", val: 1380083000, parentID: "Asia" },
+            { arg: "India", val: 1306687000, parentID: "Asia" },
+            { arg: "Pakistan", val: 193885498, parentID: "Asia" },
+            { arg: "Japan", val: 126958000, parentID: "Asia" },
+            { arg: "Russia", val: 146804372, parentID: "Europe" },
+            { arg: "Germany", val: 82175684, parentID: "Europe" },
+            { arg: "Turkey", val: 79463663, parentID: "Europe" },
+            { arg: "France", val: 66736000, parentID: "Europe" },
+            { arg: "United Kingdom", val: 63395574, parentID: "Europe" },
+            { arg: "United States", val: 325310275, parentID: "North America" },
+            { arg: "Mexico", val: 121005815, parentID: "North America" },
+            { arg: "Canada", val: 36048521, parentID: "North America" },
+            { arg: "Cuba", val: 11239004, parentID: "North America" },
+            { arg: "Brazil", val: 205737996, parentID: "South America" },
+            { arg: "Colombia", val: 48400388, parentID: "South America" },
+            { arg: "Venezuela", val: 30761000, parentID: "South America" },
+            { arg: "Peru", val: 28220764, parentID: "South America" },
+            { arg: "Chile", val: 18006407, parentID: "South America" }
+        ];
+
+        this.dsDrillDown = this.filterData("");
+    }
+    
+    customizeTooltip(arg: any) {
+        return {
+            text: arg.seriesName + ' years: ' + arg.valueText
+        };
+    }
+
+    onButtonClick() {
+        if (!this.isFirstLevel) {
+            this.isFirstLevel = true;
+            this.dsDrillDown= this.filterData("");
+        }
+    }
+
+    onPointClick(e) {
+        if (this.isFirstLevel) {
+            this.isFirstLevel = false;
+            this.dsDrillDown = this.filterData(e.target.originalArgument);
+        }
+    }
+
+    filterData(name): DataItem[] {
+        return this.dsDrillDownSrc.filter(function (item) {
+            return item.parentID === name;
+        });
+    }
+
+    customizePoint =() => {
+        let pointSettings: any;
+
+        pointSettings = {
+            color: this.colors[Number(this.isFirstLevel)]
+        };
+
+        if (!this.isFirstLevel) {
+            pointSettings.hoverStyle = {
+                hatching: "none"
+            };
+        }
+
+        return pointSettings;
+    }
+
+   
+
+}
+//#############################################################################################################################
+//class
+//#############################################################################################################################
 
 //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 export class Weather {
@@ -627,4 +746,20 @@ export interface CityPopulation {
 export interface CitiesPopulation {
     name: string;
     items: CityPopulation[];
+}
+
+//________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+export class MaleAgeStructure {
+    state: string;
+    young: number;
+    middle: number;
+    older: number;
+}
+
+
+//________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+export class DataItem {
+    arg: string;
+    val: number;
+    parentID: string;
 }

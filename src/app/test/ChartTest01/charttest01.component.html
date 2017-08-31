@@ -79,6 +79,50 @@
         </dx-tree-map>
     </div>
 
+    <div class='chart_container' style='height: 500px'>
+            <dx-chart
+            id="chart"
+            title="Male Age Structure"
+            [dataSource]="dsMaleAge">
+            <dxi-series valueField="young" name="0-14"></dxi-series>
+            <dxi-series valueField="middle" name="15-64"></dxi-series>
+            <dxi-series valueField="older" name="65 and older"></dxi-series>
+            <dxi-value-axis position="right">
+                <dxo-title text="millions"></dxo-title>
+            </dxi-value-axis>
+            <dxo-common-series-settings
+                argumentField="state"
+                type="stackedBar">
+            </dxo-common-series-settings>
+            <dxo-legend
+                verticalAlignment="bottom"
+                horizontalAlignment="center"
+                itemTextPosition="top">
+            </dxo-legend>
+            <dxo-export [enabled]="true"></dxo-export>
+            <dxo-tooltip
+                [enabled]="true"
+                location="edge"
+                [customizeTooltip]="customizeTooltip2">
+            </dxo-tooltip>
+        </dx-chart>
+    </div>
+
+
+    <div class='chart_container' style='height: 500px'>
+            <dx-button class="button-container" text="Back" icon="chevronleft" [visible]="!isFirstLevel" (onClick)="onButtonClick()">
+                </dx-button>
+        <dx-chart id="chart" [class]="isVirstLevel?'pointer-on-bars':''" [dataSource]="dsDrillDown" (onPointClick)="onPointClick($event)"
+            title="The Most Populated Countries by Continents" [customizePoint]="customizePoint" >
+            <dxi-series type="bar"></dxi-series>
+            <dxo-legend [visible]="false"></dxo-legend>
+            <dxi-value-axis [showZero]="false">
+                <dxo-label format="millions"></dxo-label>
+            </dxi-value-axis>
+        </dx-chart>
+        
+    </div>
+
 
     
 
