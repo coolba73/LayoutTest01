@@ -13,6 +13,7 @@ import { NvD3Module } from "ng2-nvd3";
 
 import { BubbleChartComponent } from "./ChartTest01/chartTest01.component";
 import { DxGridTestComponent } from "./dxgridtest/dxgridtest.component";
+import { DevExtremeModule } from "devextreme-angular";
 
 import 'd3';
 import 'nvd3';
@@ -24,7 +25,8 @@ import 'nvd3';
         MdButtonModule,
         MdInputModule,
         FormsModule,
-        NvD3Module
+        NvD3Module,
+        DevExtremeModule
     ],
     declarations:[
         Canvastest01Component

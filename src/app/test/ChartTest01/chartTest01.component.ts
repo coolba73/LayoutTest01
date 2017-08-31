@@ -22,12 +22,19 @@ export class ChartTest01Component implements OnInit{
     options_BubbleChart;
     data_BubbleChart;
 
+    weatherData: Weather[];
+
+    citiesPopulations: CitiesPopulation[];
+
+
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
     ngOnInit() {
 
         this.SetBarChart();
         this.SetAreaChart();
         this.SetCandleCharet();
+        this.DxChart_MultiplePanes();
+        this.SetCityPopulationData();
         
     }
 
@@ -287,10 +294,245 @@ export class ChartTest01Component implements OnInit{
 
     }
 
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    DxChart_MultiplePanes()
+    {
+        this.weatherData =  [{
+            month: "January",
+            avgT: 9.8,
+            minT: 4.1,
+            maxT: 15.5,
+            prec: 109
+        }, {
+            month: "February",
+            avgT: 11.8,
+            minT: 5.8,
+            maxT: 17.8,
+            prec: 104
+        }, {
+            month: "March",
+            avgT: 13.4,
+            minT: 7.2,
+            maxT: 19.6,
+            prec: 92
+        }, {
+            month: "April",
+            avgT: 15.4,
+            minT: 8.1,
+            maxT: 22.8,
+            prec: 30
+        }, {
+            month: "May",
+            avgT: 18,
+            minT: 10.3,
+            maxT: 25.7,
+            prec: 10
+        }, {
+            month: "June",
+            avgT: 20.6,
+            minT: 12.2,
+            maxT: 29,
+            prec: 2
+        }, {
+            month: "July",
+            avgT: 22.2,
+            minT: 13.2,
+            maxT: 31.3,
+            prec: 2
+        }, {
+            month: "August",
+            avgT: 22.2,
+            minT: 13.2,
+            maxT: 31.1,
+            prec: 1
+        }, {
+            month: "September",
+            avgT: 21.2,
+            minT: 12.4,
+            maxT: 29.9,
+            prec: 8
+        }, {
+            month: "October",
+            avgT: 17.9,
+            minT: 9.7,
+            maxT: 26.1,
+            prec: 24
+        }, {
+            month: "November",
+            avgT: 12.9,
+            minT: 6.2,
+            maxT: 19.6,
+            prec: 64
+        }, {
+            month: "December",
+            avgT: 9.6,
+            minT: 3.4,
+            maxT: 15.7,
+            prec: 76
+        }];
+    }
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    temperatureCustomizeText() {
+        // return this.valueText + " °C";
+        return '';
+    }
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    precipitationCustomizeText() {
+        //return this.valueText  + " mm";
+
+        return '';
+    }
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    SetCityPopulationData(){
+        this.citiesPopulations = [{
+            name: "Africa",
+            items: [{
+                value: 21324000,
+                name: "Lagos",
+                country: "Nigeria"
+            }, {
+                value: 9735000,
+                name: "Kinshasa",
+                country: "Democratic Republic of the Congo"
+            }, {
+                value: 9278441,
+                name: "Cairo",
+                country: "Egypt"
+            }]
+        }, {
+            name: "Asia",
+            items: [{
+                value: 24256800,
+                name: "Shanghai",
+                country: "China"
+            }, {
+                value: 23500000,
+                name: "Karachi",
+                country: "Pakistan"
+            }, {
+                value: 21516000,
+                name: "Beijing",
+                country: "China"
+            }, {
+                value: 16787941,
+                name: "Delhi",
+                country: "India"
+            }, {
+                value: 15200000,
+                name: "Tianjin",
+                country: "China"
+            }]
+        }, {
+            name: "Australia",
+            items: [{
+                value: 4840600,
+                name: "Sydney",
+                country: "Austraila"
+            }, {
+                value: 4440000,
+                name: "Melbourne",
+                country: "Austraila"
+            }]
+        }, {
+            name: "Europe",
+            items: [{
+                value: 14160467,
+                name: "Istanbul",
+                country: "Turkey"
+            }, {
+                value: 12197596,
+                name: "Moscow",
+                country: "Russia"
+            }, {
+                value: 8538689,
+                name: "London",
+                country: "United Kingdom"
+            }, {
+                value: 5191690,
+                name: "Saint Petersburg",
+                country: "Russia"
+            }, {
+                value: 4470800,
+                name: "Ankara",
+                country: "Turkey"
+            }, {
+                value: 3517424,
+                name: "Berlin",
+                country: "Germany"
+            }]
+        }, {
+            name: "North America",
+            items: [{
+                value: 8874724,
+                name: "Mexico City",
+                country: "Mexico"
+            }, {
+                value: 8550405,
+                name: "New York City",
+                country: "United States"
+            }, {
+                value: 3884307,
+                name: "Los Angeles",
+                country: "United States"
+            }, {
+                value: 2808503,
+                name: "Toronto",
+                country: "Canada"
+            }]
+        }, {
+            name: "South America",
+            items: [{
+                value: 11895893,
+                name: "São Paulo",
+                country: "Brazil"
+            }, {
+                value: 8693387,
+                name: "Lima",
+                country: "Peru"
+            }, {
+                value: 7776845,
+                name: "Bogotá",
+                country: "Colombia"
+            }, {
+                value: 6429923,
+                name: "Rio de Janeiro",
+                country: "Brazil"
+            }]
+        }];
+    }
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    customizeTooltip(arg) {
+        var data = arg.node.data,
+            result = null;
+
+        if (arg.node.isLeaf()) {
+            result = "<b>" + data.name + "</b> (" +
+                data.country + ")<br/>Population: " + arg.valueText;
+        }
+
+        return {
+            text: result
+        };
+    }
+
+
 
 }//class
 
+//________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+export class Weather {
+    month: string;
+    avgT: number;
+    minT: number;
+    maxT: number;
+    prec: number;
+}//class
 
+//________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 @Directive({
     selector: 'bubble-chart'
 })
@@ -371,5 +613,18 @@ export class BubbleChartComponent {
             circle.attr("r", function (d) { return d.r * k; });
         }
     });
+
 }//class
 
+//________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+export interface CityPopulation {
+    value: number;
+    name: string;
+    country: string;
+}
+
+//________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+export interface CitiesPopulation {
+    name: string;
+    items: CityPopulation[];
+}

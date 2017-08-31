@@ -1,5 +1,8 @@
 <div id='dxgridtest_main'>
   <div id='dxgridtest_container'>
-    dxgridtest
+    <dx-data-grid id="gridContainer" 
+              [dataSource]="customers"  
+              [columns]="['CompanyName', 'City', 'State', 'Phone', 'Fax']">
+    </dx-data-grid>
   </div>
 </div>
