@@ -57,6 +57,8 @@ export class DiagramService{
         //     ]
         // }
 
+        console.log( "service json :"+DiagramJson);
+
         let body = JSON.stringify({
             userid : UserID,
             diagramid : DiagramId,

@@ -2,8 +2,8 @@
   <br>
     <div  style="margin-left: 10px" >
         <button md-raised-button (click)="AddFlow()"  >Add Box</button>
-        <button md-raised-button  >Save</button>
-        <button md-raised-button  >Open</button>
+        <button md-raised-button (click)="Save()"   >Save</button>
+        <button md-raised-button (click)="Open()"   >Open</button>
     </div>
   <div id='canvas_container'>
     <fincanvas #fcvs (MouseUp)='Canvas_MouseUp()' ></fincanvas>
