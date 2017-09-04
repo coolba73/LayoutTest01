@@ -15,6 +15,8 @@ import { BubbleChartComponent } from "./ChartTest01/chartTest01.component";
 import { DxGridTestComponent } from "./dxgridtest/dxgridtest.component";
 import { DevExtremeModule } from "devextreme-angular";
 import { SummernoteTest01Component } from "./SummernoteTest/summernotetest01.component";
+import { FlowtestComponent } from "./flowtest/flowtest.component";
+
 
 import 'd3';
 import 'nvd3';
@@ -56,6 +58,7 @@ export class EscapeHtmlPipe implements PipeTransform {
         ,DxGridTestComponent
         ,SummernoteTest01Component
         ,EscapeHtmlPipe
+        ,FlowtestComponent
     ]
 })
 export class TestModule{}
