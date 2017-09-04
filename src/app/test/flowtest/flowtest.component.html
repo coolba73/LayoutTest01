@@ -6,7 +6,7 @@
         <button md-raised-button  >Open</button>
     </div>
   <div id='canvas_container'>
-    <fincanvas #fcvs></fincanvas>
+    <fincanvas #fcvs (MouseUp)='Canvas_MouseUp()' ></fincanvas>
   </div>
   <textarea id="summernote" class="form-control" ></textarea>
 </div>

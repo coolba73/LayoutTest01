@@ -27,9 +27,16 @@ export class FlowtestComponent implements OnInit{
       });
 
       // summernote.change
-      $('#summernote').on('summernote.change', function(we, contents, $editable) {
-        console.log('summernote\'s content is changed.');
-      });
+      //   $('#summernote').on('summernote.change', function(we, contents, $editable) {
+      //     console.log('summernote\'s content is changed.');
+      //   });
+
+      var self = this;
+      $('#summernote').on('summernote.change', 
+         function(){
+                self.Summernote_Change();
+            }
+        );
     }
 
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
@@ -43,5 +50,39 @@ export class FlowtestComponent implements OnInit{
         this.finCanvas.AddObject(flowBox);
 
     }
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    Canvas_MouseUp(){
+
+        // alert('mouse up');
+        let obj : BaseObject = this.finCanvas.GetCurrentBox();
+        
+        if (obj instanceof FlowBox){
+            let flowBox = <FlowBox>obj;
+            $('#summernote').summernote('code',flowBox.document);
+        }
+        else{
+            
+        }
+        
+
+    }
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    Summernote_Change(){
+
+        //console.log('summernote change');
+
+        let obj : BaseObject  = this.finCanvas.GetCurrentBox();
+
+        if (obj != null && obj instanceof FlowBox){
+
+            let text = $('#summernote').summernote('code');
+            let flowBox = <FlowBox>obj;
+            flowBox.document = text;
+        }
+
+    }
+
     
 }//class

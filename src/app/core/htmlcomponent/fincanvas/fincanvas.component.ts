@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Observable } from "rxjs/Observable";
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/operator/takeUntil';
@@ -23,7 +23,10 @@ export class FincanvasComponent implements OnInit {
 	// Variable
 	//________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 	
-	@ViewChild("myCanvas") myCanvasRef : ElementRef;
+    @ViewChild("myCanvas") myCanvasRef : ElementRef;
+    
+    @Output()
+    MouseUp : EventEmitter<any> = new EventEmitter<any>();
 
     pre_x : number;
     pre_y : number;
@@ -444,6 +447,19 @@ export class FincanvasComponent implements OnInit {
 
         this.Draw();
 
+        this.MouseUp.emit(null);
+
+    }
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    GetCurrentBox() : BaseObject {
+
+        let objs = this.objects.filter(i=> i instanceof BoxBase && i.YesSelected);
+
+        if (objs.length == 1)
+            return objs[0];
+        else
+            return null;
     }
     
 
@@ -566,7 +582,8 @@ export class FincanvasComponent implements OnInit {
 
 
     }
-	
+
+    
 
 
 }//class
