@@ -1,0 +1,25 @@
+<div id='summernotetest01_main'>
+  <div id='summernotetest01_container'>
+      
+    <div class="well off-top">
+        <div class="alert alert-success" *ngIf="postSaved">Post added.</div>
+        <h4>Post something with Summernote:</h4>
+        <button  class="btn btn-primary" (click)="SaveToServer()"  >Save</button>
+        <button  class="btn btn-primary" (click)="Open()" >Open</button>
+        <form role="form" [formGroup]="savePostForm" (ngSubmit)="savePost($event)">    
+          <div class="form-group">
+            <label>Post</label>
+            <textarea id="summernote" class="form-control" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" >Submit</button>
+          
+        </form>
+        
+      </div>
+      
+      <hr />
+      <h4>Posted below: </h4>
+      <p [innerHTML]="postText | escapeHtml"></p>
+
+  </div>
+</div>
