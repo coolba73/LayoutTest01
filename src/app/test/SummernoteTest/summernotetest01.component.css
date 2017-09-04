@@ -1,0 +1,15 @@
+#summernotetest01_main {
+  width: 1200px;
+  margin: 0 auto;
+  background:#066999;  
+}
+#summernotetest01_container {
+  height: 600px;
+  overflow: auto;
+  border: 1px solid #ebebeb;
+  margin: 10px;
+}
+
+.off-top{
+    margin-top: 100px;
+}

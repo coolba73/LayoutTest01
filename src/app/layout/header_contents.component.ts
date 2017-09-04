@@ -44,5 +44,11 @@ export class Header_Contents_Component{
     DxGridTest(){
         this._router.navigate(['/test/dxgridtest']);
     }
+
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    SummernoteTestClick()
+    {
+        this._router.navigate(['/test/summernotetest']);
+    }
     
 }//class
