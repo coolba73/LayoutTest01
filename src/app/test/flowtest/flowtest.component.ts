@@ -62,9 +62,8 @@ export class FlowtestComponent implements OnInit{
             $('#summernote').summernote('code',flowBox.document);
         }
         else{
-            
+            $('#summernote').summernote('code','');
         }
-        
 
     }
 
