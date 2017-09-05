@@ -1,0 +1,139 @@
+<div id='gridlayouttest_main'>
+    <md-grid-list cols="4" rows="5" rowHeight="2:1">
+
+        <md-grid-tile style="background: white; margin: 5px;">
+            <div class="col-sm-2" style="margin: 10px; width:600px; background: white">
+                <md-card class="example-card">
+
+                    <h1 style="text-align:center;">기아자동차</h1>
+
+                    <div class="w3-container w3-center">
+                        <p style="text-align:center;"><img src="https://colly.blob.core.windows.net/dartexcel/kia2.jpg"></p>
+                    </div>
+
+                </md-card>
+            </div>
+        </md-grid-tile>
+
+        <md-grid-tile style="background: white; margin: 5px;">
+                <div class="col-sm-2" style="margin: 10px; width:600px; background: white">
+                        <md-card class="example-card">
+        
+                            <h1 style="text-align:center;">평가금액</h1>
+                            <h1 style="text-align:center;">20,000,000,000</h1>
+        
+        
+                        </md-card>
+                    </div>
+        </md-grid-tile>
+        <md-grid-tile style="background: white; margin: 5px;">
+                <div class="col-sm-2" style="margin: 10px; width:600px; background: white">
+                        <md-card class="example-card">
+        
+                            <h1 style="text-align:center;">시가총액</h1>
+                            <h1 style="text-align:center;">20,000,000,000</h1>
+        
+        
+                        </md-card>
+                    </div>
+        </md-grid-tile>
+
+
+        <md-grid-tile style="background: white; margin: 5px;">
+                <div class="col-sm-2" style="margin: 10px; width:600px">
+                        <md-card class="example-card">
+                  
+                          <div class="w3-container w3-center" >
+                              <p style="text-align:center;"><img style="width:30%" src="https://colly.blob.core.windows.net/image/excel.png"></p>
+                            </div>
+                  
+                          <br>
+                          <md-card-actions>
+                                <p style="text-align:center;">
+                            <button md-raised-button  ><i class="material-icons" >file_download</i> Basic</button>
+                            <button md-raised-button  ><i class="material-icons" >file_download</i> Analysis </button>
+                          </md-card-actions>
+                        </md-card>
+                      </div> 
+        </md-grid-tile>
+
+
+
+        <md-grid-tile style="background: white; margin: 5px;" colspan='2' rowspan='2'>
+            <div style="width: 100%; margin: 5px">
+            <nvd3 [options]="this.options_CandleChart" [data]="this.data_CandleChart"></nvd3>
+            </div>
+        </md-grid-tile>
+
+        <md-grid-tile style="background: white; margin: 5px;" colspan='2' rowspan='2'>
+            <div style="width: 100%; margin: 5px">
+                <nvd3 [options]="this.options_AreaChart" [data]="this.data_AreaChart"></nvd3>
+            </div>
+        </md-grid-tile>
+
+
+
+        <md-grid-tile style="background: white; margin: 5px;" colspan='2' rowspan='2'>
+                <div style="width: 100%; margin: 5px">
+                <dx-chart
+                id="chart"
+                [dataSource]="weatherData"
+                defaultPane="bottomPane"
+                title="Weather in Glendale, CA">
+                <dxi-series
+                    pane="topPane"
+                    color="#b0daff"
+                    type="rangeArea"
+                    rangeValue1Field="minT"
+                    rangeValue2Field="maxT"
+                    name="Monthly Temperature Ranges, °C">
+                </dxi-series>
+                <dxi-series
+                    pane="topPane"
+                    valueField="avgT"
+                    name="Average Temperature, °C">
+                    <dxo-label
+                        [visible]="true"
+                        [customizeText]="temperatureCustomizeText">
+                    </dxo-label>
+                </dxi-series>
+                <dxi-series
+                    type="bar"
+                    valueField="prec"
+                    name="prec, mm">
+                    <dxo-label
+                        [visible]="true"
+                        [customizeText]="precipitationCustomizeText">
+                    </dxo-label>
+                </dxi-series>
+                <dxo-common-series-settings argumentField="month"></dxo-common-series-settings>
+                <dxi-pane name="topPane"></dxi-pane>
+                <dxi-pane name="bottomPane"></dxi-pane>
+                <dxi-value-axis pane="bottomPane">
+                    <dxo-grid [visible]="true"></dxo-grid>
+                    <dxo-title text="Precipitation, mm"></dxo-title>
+                </dxi-value-axis>
+                <dxi-value-axis
+                    pane="topPane"
+                    [min]="0"
+                    [max]="30">
+                    <dxo-grid [visible]="true"></dxo-grid>
+                    <dxo-title text="Temperature, °C"></dxo-title>
+                </dxi-value-axis>
+                <dxo-legend
+                    verticalAlignment="bottom"
+                    horizontalAlignment="center">
+                </dxo-legend>
+                <dxo-export [enabled]="true"></dxo-export>
+            </dx-chart>
+                </div>
+
+        </md-grid-tile>
+        
+        
+        <md-grid-tile style="background: lightblue; margin: 5px;" colspan='2' rowspan='2'>1</md-grid-tile>
+
+
+
+    </md-grid-list>
+</div>

@@ -4,7 +4,7 @@ import { Canvastest01Component } from "./canvastest01/canvastest01.component";
 import { TestRouting } from "./test.routing";
 import { FincanvasComponent } from "../core/htmlcomponent/fincanvas/fincanvas.component";
 
-import { MdButtonModule, MdInputModule } from "@angular/material";
+import { MdButtonModule, MdInputModule, MdGridListModule } from "@angular/material";
 
 import { DartTest01Component } from "./darttest01/darttest01.component";
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -16,6 +16,7 @@ import { DxGridTestComponent } from "./dxgridtest/dxgridtest.component";
 import { DevExtremeModule } from "devextreme-angular";
 import { SummernoteTest01Component } from "./SummernoteTest/summernotetest01.component";
 import { FlowtestComponent } from "./flowtest/flowtest.component";
+import { GridLayoutTestComponent } from "./gridlayouttest/gridlayouttest.component";
 
 
 import 'd3';
@@ -47,7 +48,8 @@ export class EscapeHtmlPipe implements PipeTransform {
         FormsModule,
         NvD3Module,
         DevExtremeModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MdGridListModule
     ],
     declarations:[
         Canvastest01Component
@@ -59,6 +61,7 @@ export class EscapeHtmlPipe implements PipeTransform {
         ,SummernoteTest01Component
         ,EscapeHtmlPipe
         ,FlowtestComponent
+        ,GridLayoutTestComponent
     ]
 })
 export class TestModule{}

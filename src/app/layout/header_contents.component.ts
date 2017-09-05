@@ -56,5 +56,11 @@ export class Header_Contents_Component{
     {
         this._router.navigate(['/test/flowtest']);
     }
+
+    //______________________________________________________________________________________________________________________________________________________
+    GridLayoutTestClick()
+    {
+        this._router.navigate(['/test/gridlayouttest']);
+    }
     
 }//class

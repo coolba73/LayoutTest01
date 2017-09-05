@@ -6,6 +6,7 @@ import { ChartTest01Component } from "./ChartTest01/chartTest01.component";
 import { DxGridTestComponent } from "./dxgridtest/dxgridtest.component";
 import { SummernoteTest01Component } from "./SummernoteTest/summernotetest01.component";
 import { FlowtestComponent } from "./flowtest/flowtest.component";
+import { GridLayoutTestComponent } from "./gridlayouttest/gridlayouttest.component";
 
 const routes:Routes = [
     {
@@ -34,6 +35,10 @@ const routes:Routes = [
             ,{
                 path:'flowtest',
                 component:FlowtestComponent
+            }
+            ,{
+                path:'gridlayouttest',
+                component:GridLayoutTestComponent
             }
         ]
     }
