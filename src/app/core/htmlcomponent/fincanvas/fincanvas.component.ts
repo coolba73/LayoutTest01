@@ -122,6 +122,9 @@ export class FincanvasComponent implements OnInit {
 
         if (this.YesCanvasMouseOver)
         {
+
+            // alert(e.keyCode);
+
             switch(e.keyCode)
             {
                 //delete key
@@ -161,6 +164,19 @@ export class FincanvasComponent implements OnInit {
 
                     this.Draw();
 
+                    break;
+                }
+                //ESC key
+                case 27:{
+                    
+                    if (this.yesAddLine){
+
+                        let line:LineBase = <LineBase>this.currentObj;
+                        this.yesAddLine = false;
+                        let index = this.objects.indexOf(line);
+                        if (index > -1) this.objects.splice(index,1);
+
+                    }
                     break;
                 }
             }
@@ -238,7 +254,7 @@ export class FincanvasComponent implements OnInit {
             else if( this.objects.filter(i=>i.YesSelected).length > 1 ){
 
                 let boxlist : BoxBase[] = [];
-                this.objects.filter(i=>i.YesSelected && i.Type === BoxBase.name).forEach(i => {
+                this.objects.filter(i=>i.YesSelected && i instanceof BoxBase).forEach(i => {
                     let dx = this.pre_x - x;
                     let dy = this.pre_y - y;
                     (<BoxBase>i).x -= dx;
