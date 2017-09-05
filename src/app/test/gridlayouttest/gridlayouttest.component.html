@@ -1,5 +1,5 @@
 <div id='gridlayouttest_main'>
-    <md-grid-list cols="4" rows="5" rowHeight="2:1">
+    <md-grid-list cols="4" rows="5" rowHeight="200px" >
 
         <md-grid-tile style="background: white; margin: 5px;">
             <div class="col-sm-2" style="margin: 10px; width:600px; background: white">
@@ -50,7 +50,7 @@
                           <br>
                           <md-card-actions>
                                 <p style="text-align:center;">
-                            <button md-raised-button  ><i class="material-icons" >file_download</i> Basic</button>
+                            <button md-raised-button  (click)="this.ExcelDownload()" ><i class="material-icons" >file_download</i> Basic</button>
                             <button md-raised-button  ><i class="material-icons" >file_download</i> Analysis </button>
                           </md-card-actions>
                         </md-card>
@@ -74,12 +74,12 @@
 
 
         <md-grid-tile style="background: white; margin: 5px;" colspan='2' rowspan='2'>
-                <div style="width: 100%; margin: 5px">
+                <div style="width: 100%; margin: 5px; ">
                 <dx-chart
                 id="chart"
                 [dataSource]="weatherData"
                 defaultPane="bottomPane"
-                title="Weather in Glendale, CA">
+                title="Weather in Glendale, CA" size='height:10;' >
                 <dxi-series
                     pane="topPane"
                     color="#b0daff"
@@ -135,7 +135,7 @@
                 <div style="width: 100%; margin: 5px">
                 <dx-tree-map [dataSource]="citiesPopulations" title="The Most Populated Cities by Continents" resolveLabelOverflow="ellipsis">
                         <dxo-tooltip [enabled]="true" format="thousands" [customizeTooltip]="customizeTooltip"></dxo-tooltip>
-                        <dxo-size [height]="350"></dxo-size>
+                        <dxo-size [height]="330"></dxo-size>
                     </dx-tree-map>
                 </div>
         </md-grid-tile>

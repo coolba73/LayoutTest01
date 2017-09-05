@@ -379,8 +379,18 @@ export class GridLayoutTestComponent implements OnInit {
         };
     }
 
+    //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    ExcelDownload()
+    {
+        //https://colly.blob.core.windows.net/dartexcel/upload.xls
+        // alert('down');
 
-}//class
+        // window.location.href = "https://colly.blob.core.windows.net/dartexcel/upload.xls";
+        window.location.href = "https://colly.blob.core.windows.net/makeexcel/test_make.xlsx";
+
+    }
+
+}//main class
 
 //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 export class Weather {
@@ -395,11 +405,11 @@ export class Weather {
 export interface CitiesPopulation {
     name: string;
     items: CityPopulation[];
-}
+}//class
 
 //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 export interface CityPopulation {
     value: number;
     name: string;
     country: string;
-}
+}//class
