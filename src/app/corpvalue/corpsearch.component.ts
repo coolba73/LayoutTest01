@@ -17,7 +17,8 @@ export class CorpSearchComponent{
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
     Search()
     {
-        this._router.navigate(['../oneresult'] , {relativeTo:this._activatedRoute} );
+        // this._router.navigate(['../oneresult'] , {relativeTo:this._activatedRoute} );
+        this._router.navigate(['/test/gridlayouttest']);
         
     }
 

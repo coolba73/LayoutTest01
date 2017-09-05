@@ -131,7 +131,14 @@
         </md-grid-tile>
         
         
-        <md-grid-tile style="background: lightblue; margin: 5px;" colspan='2' rowspan='2'>1</md-grid-tile>
+        <md-grid-tile style="background: white; margin: 5px;" colspan='2' rowspan='2'>
+                <div style="width: 100%; margin: 5px">
+                <dx-tree-map [dataSource]="citiesPopulations" title="The Most Populated Cities by Continents" resolveLabelOverflow="ellipsis">
+                        <dxo-tooltip [enabled]="true" format="thousands" [customizeTooltip]="customizeTooltip"></dxo-tooltip>
+                        <dxo-size [height]="350"></dxo-size>
+                    </dx-tree-map>
+                </div>
+        </md-grid-tile>
 
 
 
