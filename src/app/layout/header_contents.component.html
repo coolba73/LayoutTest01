@@ -1,4 +1,10 @@
+<div id="content">
+  <router-outlet></router-outlet>
+</div>
+
 <div class="navbar" >
+
+  <button md-button style="color:white">Home</button>
 
   <button md-button [mdMenuTriggerFor]="menu" style="color:white">Test</button>
   <md-menu #menu="mdMenu">
@@ -14,14 +20,13 @@
 
   <button md-button [mdMenuTriggerFor]="menu2" style="color:white">기업가치평가</button>
   <md-menu #menu2="mdMenu">
-    <button md-menu-item (click)="this.CorpSearchClick()">상장법인 조회</button>
-    <button md-menu-item (click)="this.DartTestClick()">유형별 조회</button>
+    <button md-menu-item (click)="this.CorpSearchClick()">개별기업</button>
+    <button md-menu-item (click)="this.DartTestClick()">유형별</button>
   </md-menu>
 
-  <button md-button [mdMenuTriggerFor]="menu" style="color:white">부동산 평가</button>
+  <button md-button style="color:white">최적자산배분</button>
+  <button md-button style="color:white">Login</button>
+
 
 </div>
 
-<div id="content">
-  <router-outlet></router-outlet>
-</div>
