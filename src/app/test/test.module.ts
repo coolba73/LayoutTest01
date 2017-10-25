@@ -2,9 +2,9 @@ import { NgModule, Pipe, PipeTransform } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Canvastest01Component } from "./canvastest01/canvastest01.component";
 import { TestRouting } from "./test.routing";
-import { MdButtonModule, MdInputModule, MdGridListModule } from "@angular/material";
+import { MdButtonModule, MdInputModule, MdGridListModule  } from "@angular/material";
 import { DartTest01Component } from "./darttest01/darttest01.component";
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartTest01Component } from "./ChartTest01/chartTest01.component";
 import { NvD3Module } from "ng2-nvd3";
 import { BubbleChartComponent } from "./ChartTest01/chartTest01.component";
@@ -48,7 +48,8 @@ export class EscapeHtmlPipe implements PipeTransform {
         NvD3Module,
         DevExtremeModule,
         ReactiveFormsModule,
-        MdGridListModule
+        MdGridListModule,
+        
     ],
     declarations:[
         Canvastest01Component

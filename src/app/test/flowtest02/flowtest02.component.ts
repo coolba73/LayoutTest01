@@ -5,6 +5,7 @@ import { FlowBox } from "../../core/shape/FlowBox";
 import { LineBase } from "../../core/shape/LineBase";
 import { DiagramService } from "../../service/DiagramService";
 import { UUID } from "angular2-uuid";
+import { MdDialog } from "@angular/material";
 
 declare var $: any;
 
@@ -16,7 +17,7 @@ declare var $: any;
 })
 
 export class FlowTest02Component implements OnInit{
-    
+
     //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
     @ViewChild("fcvs") finCanvas : FincanvasComponent;
     
