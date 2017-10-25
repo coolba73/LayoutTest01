@@ -1,0 +1,17 @@
+#makeassetflow_main {
+  width: 1200px;
+  margin: 0 auto;
+  background:#066999;  
+}
+#makeassetflow_container {
+  height: 600px;
+  overflow: auto;
+  border: 1px solid #ebebeb;
+  margin: 10px;
+}
+#canvas_container {
+  height: 400px;
+  overflow: auto;
+  border: 1px solid #ebebeb;
+  margin: 10px;
+}

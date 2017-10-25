@@ -7,7 +7,7 @@ import { DxGridTestComponent } from "./dxgridtest/dxgridtest.component";
 import { SummernoteTest01Component } from "./SummernoteTest/summernotetest01.component";
 import { FlowtestComponent } from "./flowtest/flowtest.component";
 import { GridLayoutTestComponent } from "./gridlayouttest/gridlayouttest.component";
-
+import { FlowTest02Component } from "./flowtest02/flowtest02.component"
 const routes:Routes = [
     {
         path:'',
@@ -35,6 +35,11 @@ const routes:Routes = [
             ,{
                 path:'flowtest',
                 component:FlowtestComponent
+            }
+            ,{
+                path:'flowtest02',
+                component:FlowTest02Component
+
             }
             ,{
                 path:'gridlayouttest',

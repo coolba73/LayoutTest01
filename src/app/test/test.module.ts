@@ -2,21 +2,20 @@ import { NgModule, Pipe, PipeTransform } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Canvastest01Component } from "./canvastest01/canvastest01.component";
 import { TestRouting } from "./test.routing";
-import { FincanvasComponent } from "../core/htmlcomponent/fincanvas/fincanvas.component";
-
 import { MdButtonModule, MdInputModule, MdGridListModule } from "@angular/material";
-
 import { DartTest01Component } from "./darttest01/darttest01.component";
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ChartTest01Component } from "./ChartTest01/chartTest01.component";
 import { NvD3Module } from "ng2-nvd3";
-
 import { BubbleChartComponent } from "./ChartTest01/chartTest01.component";
 import { DxGridTestComponent } from "./dxgridtest/dxgridtest.component";
 import { DevExtremeModule } from "devextreme-angular";
 import { SummernoteTest01Component } from "./SummernoteTest/summernotetest01.component";
 import { FlowtestComponent } from "./flowtest/flowtest.component";
 import { GridLayoutTestComponent } from "./gridlayouttest/gridlayouttest.component";
+import { FincanvasComponent } from "../core/htmlcomponent/fincanvas/fincanvas.component";
+import { FlowTest02Component } from "./flowtest02/flowtest02.component";
+
 
 
 import 'd3';
@@ -53,7 +52,6 @@ export class EscapeHtmlPipe implements PipeTransform {
     ],
     declarations:[
         Canvastest01Component
-        ,FincanvasComponent
         ,DartTest01Component
         ,ChartTest01Component
         ,BubbleChartComponent
@@ -62,6 +60,9 @@ export class EscapeHtmlPipe implements PipeTransform {
         ,EscapeHtmlPipe
         ,FlowtestComponent
         ,GridLayoutTestComponent
+        ,FincanvasComponent
+        ,FlowTest02Component
+        
     ]
 })
 export class TestModule{}

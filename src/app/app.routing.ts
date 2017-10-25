@@ -28,6 +28,10 @@ export const routes : Routes = [
             {
                 path:'corpvalue',
                 loadChildren:'./corpvalue/corpvalue.module#CorpValueModule'
+            },
+            {
+                path:'assetmng',
+                loadChildren:'./assetmng/assetmng.module#AssetMngModule'
             }
         ]
     },

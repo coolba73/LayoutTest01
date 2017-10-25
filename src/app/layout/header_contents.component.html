@@ -23,7 +23,11 @@
     <button md-menu-item (click)="this.DartTestClick()">유형별</button>
   </md-menu>
 
-  <button md-button style="color:white">최적자산배분</button>
+  <button md-button [mdMenuTriggerFor]="mnuAsset" style="color:white">최적자산배분</button>
+  <md-menu #mnuAsset="mdMenu">
+    <button md-menu-item (click)="this.MakeAssetFlow()">Make Logic</button>
+  </md-menu>
+
 
 </div>
 
